@@ -2,7 +2,7 @@
 <html lang="en" ng-app="entertainmentNews">
 <head>
   <meta charset="UTF-8">
-  <title>ANGULAR SLICK SLIDER</title>
+  <title>Entertainment News and Updates</title>
 
   <!--Inlcude Slick SLider CSS-->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
@@ -24,9 +24,13 @@
   <div class="container" ng-controller="event-cards">
     <ul class="event-cards-container">
       <li ng-repeat="eventCard in eventCards">
-        <h2>{{eventCard.header}}</h2>
-        <img src="{{eventCard.image}}" alt="event cards showcase">
-        <div class="paragraph-conatiner" ng-bind-html="eventCard.paragraph"></div>
+        <div class="img-container">
+          <img src="{{eventCard.image}}" alt="event cards showcase">
+        </div>
+        <div class="text-container">
+          <h2>{{eventCard.header}}</h2>
+          <div class="paragraph-conatiner" ng-bind-html="eventCard.paragraph"></div>
+        </div>
       </li>
     </ul>
   </div>
